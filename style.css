@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&display=swap');
+
+/*
+* {  
+    margin: 0;
+    padding: 0;
+    } 
+ Esto cambia todos los margener.        
+Para resetear los estilos por defecto de los navegadores de forma efectiva, utilizamos las propiedades 
+margin, que define el margen en los cuatro lados del elemento (arriba, derecha, abajo, izquierda), y 
+padding, que define el relleno interno en los mismos cuatro lados del elemento, ambas con un valor de 0.*/
+       
+/* el viewport es la porción del área visible de un plano y se utiliza como unidad de medida en CSS 
+para crear páginas web 100% responsivas. */
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    height: 100vh; /* nuestra pagina ocupe el 100% de altur // la v significa viewport y la h altura height */
+    box-sizing: border-box; /*En este caso, la imagen (elemento hijo) "se encojería" y se ajustaría al tamaño 
+                            del contenido (elemento padre). Esto ocurre porque el border-box le indica al 
+                            navegador que tenga en cuenta cualquier borde y relleno en los valores  
+                            especificados para el ancho y el alto de un elemento.*/
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    font-family: 'Arial';
+    font-style: oblique;
+    color: whitesmoke;
+}
+
+h1{
+    font-weight: bold; /*font-weight: bold; (Texto en negrita)*/
+}
+
+p { 
+    font-family: 'Arial'; 
+    font-size: medium; 
+    font-style:normal; 
+    color: whitesmoke; 
+}
+
+footer { 
+    background-color: #145665; 
+}
+
+/*.container {   las clases comienzan con .(punto
+    text-align: center;  /* centro el texto
+}*/
+
+.logo{
+    color: #99a8ab;
+}
+
+.titulo-destaque{
+    color: #22D4FD;
+    /*border: 1px solid #22D4FD;  /*Borde con 1 px de ancho, de tipo sólido y color del borde azul*/
+
+}
+
+/* guia completa de Flexbox.  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.presentacion{ 
+    display: flex; /* Flexbox objetivo organizar los elementos de una página HTML de forma dinámica y 
+                      mantener un diseño flexible*/
+    align-items: center; /* centra todo */
+    margin: 10%; /* El margen del 10% alrededor del <main> evita que los elementos queden pegados a los bordes.*/
+    justify-content: space-between;
+}
+
+.presentacion-contenido{
+    width: 615px;
+    display: flex; /* coloca los botones uno al lado del otro */
+    flex-direction: column; /* esto lo deja en columnas y no de forma vertical que es por defecto*/
+    gap: 25px; /* La propiedad gap no es exclusiva de Flexbox, sin embargo, se utiliza casi siempre en 
+                conjunto con él. Esta propiedad especifica en CSS el tamaño de los espacios entre filas 
+                y columnas en diseños de cuadrícula*/
+}
+.presentacion-contenido-titulo {
+
+    font-size: 36px; /* tamaño de la fuente*/
+    font-family: "Krona One", sans-serif;
+}
+
+.presentacion-contenido-texto{
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.presentacion-enlaces{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* espacios entre filas y columnas en diseños de cuadrícula*/
+
+}
+
+.presentacion-enlaces-subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.presentacion-enlaces-link{
+    width: 378px;
+    /*background-color: #22D4FD;  este comando cambia el color de los botones */
+    color: #f6f6f6;
+    text-align: center;
+    padding: 21.5px ;
+    border-radius: 8px; /*border-radius para añadir la curva al borde del botón // mientras mas px mas redondeado se ve x*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none; /*sirve para eliminar el subrayado de <a> del hipervínculo  */
+    border: 2px solid #22d4fd; /* border para añadir el borde alrededor de los botones*/
+    display: flex; /* para alinear el icono con el nombre de los contenedores a todo hacia al lado*/
+    justify-content: center; /* para centrar el mensaje con el icono dentro del a*/
+    gap: 10px;
+}
+
+.presentacion-enlaces-link:hover{ /* selector hover se utiliza para seleccionar elementos cuando pasas el mouse sobre ellos // cambia de color */
+    background-color: #272727;
+    padding: 3%; /* hace un efecto tipo animación en los botones */
+}
+
+li:hover{
+    font-family: "Montserrat", sans-serif; 
+    font-size: 40px;
+}
+
+a:hover{
+    color: rgb(102, 210, 237);
+}
