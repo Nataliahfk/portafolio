@@ -7,17 +7,21 @@
     /* Las variables CSS pueden ser muy útiles para hacer que las actualizaciones de diseño del proyecto sean más prácticas. 
     Las variables son elementos que permiten manipular valores durante la ejecución de tu código ej: --tamano-de-la-fuente:  24px;*/ 
 
-    --color-primario: black;
-    --color-secundario: #2692b3;
-    --color-terciario: #a4ce95;
-    --color-hover : #719567;
+    --color-primario: #740938;  
+    --color-secundario: #C30E59;
+    --color-terciario: #F2AE66;
+    --color-hover : #E82561;
     
     --fuente-monserrat: "Montserrat", sans-serif;
-    --fuente-krona: "Krona One", sans-serif;    
+    --fuente-krona: "Krona One", sans-serif; 
+    
+    /* reemplazar los px por rem // 1 rem equivale a 16 px y 24 serian 1.5 rem  osea 24 px*/
+    --font-size: 1.5rem; /* rem es una medida relativa pixel no es relativa es fija por lo que se debe cambiar */ 
 }
 
 /*ctrl + D  sobre lo que quiero modificar y seleccionara todo lo que sea igual. 
 Esto te permitirá cambiar simultáneamente todos los valores siguientes que sean iguales a lo que seleccionaste con el mouse*/
+/* ctrl + F para buscar , es como el ctrl V*/ 
 
 * {  
     margin: 0;
@@ -47,12 +51,12 @@ body {
 
 .header-menu{
     display: flex;
-    gap: 80px; /* para poder ocupar gap debo tener antes el display flex*/
+    gap: 5rem; /* para poder ocupar gap debo tener antes el display flex*/
 }
 
 .header-menu-link{
     font-family: var(--fuente-monserrat);
-    font-size: 24px;
+    font-size: var(--font-size);
     font-weight: 600;
     color: var(--color-terciario); /* asigno la variable arriba*/
     text-decoration: none;  /* si no pongo esto me aparece sobre mí subrayado al poner none desaparece*/ 
@@ -77,7 +81,7 @@ body {
 }
 
 .presentacion-contenido{
-    width: 615px;
+    width: 38.44rem;
     display: flex; /* coloca los botones uno al lado del otro */
     flex-direction: column; /* esto lo deja en columnas y no de forma vertical que es por defecto*/
     gap: 40px; /* La propiedad gap no es exclusiva de Flexbox, sin embargo, se utiliza casi siempre en 
@@ -87,7 +91,7 @@ body {
 
 .presentacion-contenido-titulo {
 
-    font-size: 36px; /* tamaño de la fuente*/
+    font-size: 2.25rem; /* tamaño de la fuente*/
     font-family: var(--fuente-krona);
 }
 
@@ -98,7 +102,7 @@ body {
 }
 
 .presentacion-contenido-texto{
-    font-size: 24px;
+    font-size: var(--font-size);
     font-family: var(--fuente-monserrat);
 }   
 
@@ -107,31 +111,31 @@ body {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    gap: 32px; /* espacios entre filas y columnas en diseños de cuadrícula*/
+    gap: 2rem; /* espacios entre filas y columnas en diseños de cuadrícula*/
 }
 
 .presentacion-enlaces-subtitulo{
     font-family: var(--fuente-krona);
-    font-size: 24px;
+    font-size: var(--font-size);
     font-weight: 400;
 }
 
 /* El padding es responsable de definir la distancia entre un contenido y sus bordes. para crear un espacio interno entre entre los bordes y el contenido*/
 .presentacion-enlaces-link{
-    width: 320px;
+    width: 20rem;
     /*background-color: #22D4FD;  este comando cambia el color de los botones */
     color: var(--color-secundario);
     text-align: center;
-    padding: 21.5px ;
-    border-radius: 8px; /*border-radius para añadir la curva al borde del botón // mientras mas px mas redondeado se ve x*/
+    padding: 1.34rem ;
+    border-radius: 0.5rem; /*border-radius para añadir la curva al borde del botón // mientras mas px mas redondeado se ve x*/
     font-family: var(--fuente-monserrat);
-    font-size: 24px;
+    font-size: var(--font-size);
     font-weight: 600;
     text-decoration: none; /*sirve para eliminar el subrayado de <a> del hipervínculo  */
-    border: 2px solid var(--color-terciario); /* border para añadir el borde alrededor de los botones*/
+    border: 0.125rem solid var(--color-terciario); /* border para añadir el borde alrededor de los botones*/
     display: flex; /* para alinear el icono con el nombre de los contenedores a todo hacia al lado*/
     justify-content: center; /* para centrar el mensaje con el icono dentro del a*/
-    gap: 16px; /* separacion enetre el icono y la palabra*/
+    gap: 1rem; /* separacion enetre el icono y la palabra*/
 }
 
 .presentacion-enlaces-link:hover{ /* selector hover se utiliza para seleccionar elementos cuando pasas el mouse sobre ellos // cambia de color */
@@ -146,14 +150,14 @@ a:hover{
 
 .footer{
     background-color: var(--color-terciario);
-    padding: 10px; 
+    padding: 0.7rem; 
     text-align: center;
 }
 
 .footer-informacion{
     color: black;
     font-family: var(--fuente-monserrat);
-    font-size: 15px;
+    font-size: 1px;
     font-weight: 400;
 }
 
@@ -163,5 +167,5 @@ a:hover{
 }
 
 img{
-    padding: 10px;
+    padding: 0.7rem;
 }
